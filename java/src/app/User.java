@@ -1,40 +1,63 @@
 package src.app;
 
-public class User {
-    private int id;
-    private String nom;
-    private String prenom;
-    private String mail;
-    private String phone;
-    private Role id_role;
+import java.util.ArrayList;
 
-    User(int id, String nom, String prenom, String mail, String phone, Role id_role){
-        this.id=id;
-        this.nom=nom;
-        this.prenom=prenom;
-        this.mail=mail;
-        this.phone=phone;
-        this.id_role=id_role;
+public class User {
+    protected int id;
+    protected String nom;
+    protected String prenom;
+    protected String mail;
+    protected String phone;
+
+
+    public User(int id, String nom, String prenom, String mail, String phone) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.mail = mail;
+        this.phone = phone;
     }
 
-    public int getUserId(){
+    public User() {}
+
+    public int getId() {
         return id;
     }
-    public String getUserName(){
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNom() {
         return nom;
     }
-    public String getUserPrenom(){
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
         return prenom;
     }
-    public String getUserMail(){
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getMail() {
         return mail;
     }
-    public String getUserPhone(){
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPhone() {
         return phone;
     }
-    public Role getUserRole(){
-        return id_role;
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
-    
-    
+
 }

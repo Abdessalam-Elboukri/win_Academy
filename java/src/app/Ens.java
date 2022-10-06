@@ -1,35 +1,46 @@
 package src.app;
 
 
-public class Ens {
-    private int ens_id;
+public class Ens extends User {
     private String datePrise;
     private int indice;
-    private Deparetement id_dep;
-    private Matiere id_matiere;
+    private  Class classe ;
 
-    Ens(int ens_id, String datePrise, int indice, Deparetement id_dep, Matiere id_matiere){
-        this.ens_id=ens_id;
-        this.datePrise=datePrise;
-        this.indice=indice;
-        this.id_dep=id_dep;
-        this.id_matiere=id_matiere;
+
+    public Ens(int id, String nom, String prenom, String mail, String phone, String datePrise, int indice) {
+        super(id, nom, prenom, mail, phone);
+        DataUser();
+        this.datePrise = datePrise;
+        this.indice = indice;
+    }
+    public Ens() {
     }
 
-    public int getEnsId(){
-        return ens_id;
-    }
-    public String getEnsdatePrise(){
+    public String getDatePrise() {
         return datePrise;
     }
-    public int getEnsIndice(){
-        return indice;
-    }
-    public Deparetement getEnsIdDep(){
-        return id_dep;
-    }
-    public Matiere getEnsMatiere(){
-        return id_matiere;
+
+    public void setDatePrise(String datePrise) {
+        this.datePrise = datePrise;
     }
 
+    public int getIndice(int ens_indice) {
+        return indice;
+    }
+
+    public void setIndice(int indice) {
+        this.indice = indice;
+    }
+    public void DataUser(){
+        User user = new User(this.id,this.nom,this.prenom,this.mail,this.phone);
+    }
+
+
+    public Class getClasse() {
+        return classe;
+    }
+
+    public void setClasse(Class classe) {
+        this.classe = classe;
+    }
 }

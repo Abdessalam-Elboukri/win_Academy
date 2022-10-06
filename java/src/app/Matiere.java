@@ -3,12 +3,37 @@ package src.app;
 public class Matiere {
     private int id_matiere;
     private String nom ;
-    private Salle id_salle;
 
-    Matiere(int id_matiere, String nom, Salle id_salle){
+    public Matiere() {
+    }
+
+    public int getId_matiere() {
+        return id_matiere;
+    }
+
+    public void setId_matiere(int id_matiere) {
+        this.id_matiere = id_matiere;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    @Override
+    public String toString() {
+        return "Matiere{" +
+                "id_matiere=" + id_matiere +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
+
+    public Matiere(int id_matiere, String nom){
         this.id_matiere=id_matiere;
         this.nom=nom;
-        this.id_salle=id_salle;
     }
 
     public int getMatiereId(){
@@ -16,8 +41,5 @@ public class Matiere {
     }
     public String getMatiereName(){
         return nom;
-    }
-    public Salle getMatiereSalle(){
-        return id_salle;
     }
 }
